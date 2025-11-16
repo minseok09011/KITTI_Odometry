@@ -75,9 +75,9 @@ for i in range(file_list - 1):
     R, t = find_R_t(kp, kp_next, matches)
     scale = getAbsoluteScale(i + 1)
     t_scale = scale * t
-    residual = np.array([0,0,0,1])
-    pose_matrix = np.vstack((np.hstack((R, t_scale)), residual))
-    rotation = first_rotation @ R
+    pose_matrix = np.eye(4)
+    pose_matrix[0:3, 0:3] = R.T
+    pose_matrix[0:3, 3] = (-R.T @ t_scale).ravel()
     first_pose = first_pose @ pose_matrix
     X_Y_Z[0][i + 1] = first_pose[0][3] #x
     X_Y_Z[1][i + 1] = first_pose[1][3] #y
