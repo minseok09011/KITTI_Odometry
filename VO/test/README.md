@@ -1,6 +1,7 @@
 < 결과 >
 
 00
+
 Loaded 4541 images.
 estimated_kitti.txt
 GT poses: 4497, EST poses: 4497
@@ -10,6 +11,7 @@ RPE RMSE: 0.973 m
 
 
 01
+
 Loaded 1101 images.
 estimated_kitti_01.txt
 GT poses: 1096, EST poses: 1096
@@ -18,6 +20,7 @@ APE RMSE: 416.537 m
 RPE RMSE: 10.527 m
 
 02
+
 Loaded 4661 images.
 estimated_kitti_02.txt
 GT poses: 4611, EST poses: 4611
@@ -26,6 +29,7 @@ APE RMSE: 289.725 m
 RPE RMSE: 1.559 m
 
 03
+
 Loaded 801 images.
 estimated_kitti_03.txt
 GT poses: 796, EST poses: 796
@@ -34,6 +38,7 @@ APE RMSE: 98.888 m
 RPE RMSE: 3.713 m
 
 04
+
 Loaded 271 images.
 estimated_kitti_04.txt
 GT poses: 270, EST poses: 270
@@ -42,6 +47,7 @@ APE RMSE: 22.450 m
 RPE RMSE: 4.509 m
 
 05
+
 Loaded 2761 images.
 Saved → estimated_kitti_05.txt
 GT poses: 2741, EST poses: 2741
@@ -50,6 +56,7 @@ APE RMSE: 136.457 m
 RPE RMSE: 1.222 m
 
 06
+
 Loaded 1101 images.
 Saved → estimated_kitti_06.txt
 GT poses: 1093, EST poses: 1093
@@ -58,6 +65,7 @@ APE RMSE: 127.516 m
 RPE RMSE: 1.682 m
 
 07
+
 Loaded 1101 images.
 Saved → estimated_kitti_07.txt
 GT poses: 1091, EST poses: 1091
@@ -66,6 +74,7 @@ APE RMSE: 69.268 m
 RPE RMSE: 1.858 m
 
 08
+
 Loaded 4071 images.
 Saved → estimated_kitti_08.txt
 GT poses: 4034, EST poses: 4034
@@ -74,6 +83,7 @@ APE RMSE: 201.669 m
 RPE RMSE: 2.279 m
 
 09
+
 Loaded 1591 images.
 Saved → estimated_kitti_09.txt
 GT poses: 1575, EST poses: 1575
@@ -82,6 +92,7 @@ APE RMSE: 163.478 m
 RPE RMSE: 2.137 m
 
 10
+
 Loaded 1201 images.
 Saved → estimated_kitti_10.txt
 GT poses: 1189, EST poses: 1189
