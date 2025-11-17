@@ -92,9 +92,13 @@ RPE RMSE: 2.832 m
 
 -----------------------------------------------------------
 APE 수치가 높은거 같아서 논문 찾아보니까
+
 ORB-SLAM2 Monocular VO: APE 100~300m (KITTI Seq 00)
+
 DeepVO Monocular: APE 150~350m (KITTI Seq 00)
+
 VISO2-Mono: APE 200m 이상
+
 은 괜찮은 수치라고 하더라고 -> 정상범위
 
 < if VO 성능 개선하려면 >
