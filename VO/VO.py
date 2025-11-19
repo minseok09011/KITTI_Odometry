@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 #########################################################
-directory_path = '/home/minseok/Desktop/KITTI dataset/data_odometry_gray/04/image_0'
+directory_path = '/home/minseok/Desktop/KITTI dataset/data_odometry_gray/01/image_0'
 file_list = len(os.listdir(directory_path))
-poses_df = pd.read_csv('/home/minseok/Desktop/KITTI dataset/data_odometry_poses/dataset/poses/04.txt', delimiter=' ', header=None)
+poses_df = pd.read_csv('/home/minseok/Desktop/KITTI dataset/data_odometry_poses/dataset/poses/01.txt', delimiter=' ', header=None)
 annotations = poses_df.values
 
 def getAbsoluteScale(frame_id):
@@ -56,7 +56,7 @@ def bfmatcher(des, des_next):
 def find_R_t(kp, kp_next, matches):
     kp_pts = np.float32([ kp[m.queryIdx].pt for m in matches ]).reshape(-1, 1, 2)
     src_pts = np.float32([ kp_next[m.trainIdx].pt for m in matches ]).reshape(-1, 1, 2)
-    essential, mask = cv.findEssentialMat(kp_pts, src_pts, camera_matrix, method= cv.RANSAC, prob = 0.999, threshold= 1.0)
+    essential, mask = cv.findEssentialMat(kp_pts, src_pts, camera_matrix, method= cv.RANSAC, prob = 0.999, threshold= 0.9)
     
     if essential is None:
         return np.eye(3), np.zeros(3, 1)
