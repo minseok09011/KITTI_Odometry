@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 #########################################################
-directory_path = '/home/minseok/Desktop/KITTI dataset/data_odometry_gray/01/image_0'
+directory_path = '/home/minseok/Desktop/KITTI dataset/data_odometry_gray/09/image_0'
 file_list = len(os.listdir(directory_path))
-poses_df = pd.read_csv('/home/minseok/Desktop/KITTI dataset/data_odometry_poses/dataset/poses/01.txt', delimiter=' ', header=None)
+poses_df = pd.read_csv('/home/minseok/Desktop/KITTI dataset/data_odometry_poses/dataset/poses/09.txt', delimiter=' ', header=None)
 annotations = poses_df.values
 
 def getAbsoluteScale(frame_id):
@@ -67,8 +67,8 @@ def find_R_t(kp, kp_next, matches):
 for i in range(file_list - 1):
     img_path1 = os.path.join(directory_path, str(i).zfill(6) + '.png')
     img_path2 = os.path.join(directory_path, str(i+1).zfill(6) + '.png')
-    img = cv.imread(img_path1)
-    img_next = cv.imread(img_path2)
+    img = cv.GaussianBlur(cv.imread(img_path1), (9,9),sigmaX = 0, sigmaY = 0)
+    img_next = cv.GaussianBlur(cv.imread(img_path2), (9,9), sigmaX = 0, sigmaY = 0)
     kp, des = orb_detect(img)
     kp_next, des_next= orb_detect(img_next)
     matches = bfmatcher(des, des_next)
